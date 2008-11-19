@@ -1,0 +1,16 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for :country, :url => admin_country_path(@country), :html => { :method => :put } do |f| -%>
+
+<% fieldset do -%>
+	<%= f.text_field :name %>
+	<%= f.text_field :a2 %>
+	<%= f.text_field :a3 %>
+	<%= f.text_field :numeric %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Update" %> | <%= link_to "back to countries list", admin_countries_path %>
+<% end -%>
+
+<% end -%>

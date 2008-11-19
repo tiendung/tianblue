@@ -1,0 +1,19 @@
+<h1>Products</h1>
+<p><%= link_to "new", new_admin_product_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Product</th>
+		<th scope="col" class="num">Price</th>
+	</tr>
+</thead>
+<tbody>
+<% @products.each do |p| -%>
+<tr>
+	<th scope="row" class="text"><%=h p.name %> (<%=h p.sku %>) | <%= link_to "edit", edit_admin_product_path(p) %></th>
+	<td class="num"><%=h number_to_currency( p.price ) %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>

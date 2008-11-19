@@ -1,0 +1,83 @@
+<h1>Orders</h1>
+
+<h2>Paid</h2>
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="date">When?</th>
+		<th scope="col" class="text">Order for</th>
+		<th scope="col" class="num">Value</th>
+	</tr>
+</thead>
+<tbody>
+<% @paid_orders.each do |o| -%>
+<tr>
+	<th class="date"><%= o.updated_at.strftime("%d %b, %y") %></th>
+	<td scope="row" class="text"><%= link_to o.name, admin_order_path(o) %></td>
+	<td class="num"><%=h number_to_currency( o.value ) %></td>
+</tr>
+<% end unless @paid_orders.empty? -%>
+</tbody>
+</table>
+
+<h3>Pending</h3>
+<table cellspacing="0" class="sub">
+<thead>
+	<tr>
+		<th scope="col" class="date">When?</th>
+		<th scope="col" class="text">Order for</th>
+		<th scope="col" class="num">Value</th>
+	</tr>
+</thead>
+<tbody>
+<% @pending_orders.each do |o| -%>
+<tr>
+	<th class="date"><%= o.updated_at.strftime("%d %b, %y") %></th>
+	<td scope="row" class="text"><%= link_to o.name, admin_order_path(o) %></td>
+	<td class="num"><%=h number_to_currency( o.value ) %></td>
+</tr>
+<% end unless @pending_orders.empty? -%>
+</tbody>
+</table>
+
+<h3>Cancelled</h3>
+<table cellspacing="0" class="sub">
+<thead>
+	<tr>
+		<th scope="col" class="date">When?</th>
+		<th scope="col" class="text">Order for</th>
+		<th scope="col" class="num">Value</th>
+	</tr>
+</thead>
+<tbody>
+<% @cancelled_orders.each do |o| -%>
+<tr>
+	<th class="date"><%= o.updated_at.strftime("%d %b, %y") %></th>
+	<td scope="row" class="text"><%= link_to o.name, admin_order_path(o) %></td>
+	<td class="num"><%=h number_to_currency( o.value ) %></td>
+</tr>
+<% end unless @cancelled_orders.empty? -%>
+</tbody>
+</table>
+
+<% content_for :sub do %>
+<h2>Shipped</h2>
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="date">When?</th>
+		<th scope="col" class="text">Order for</th>
+		<th scope="col" class="num">Value</th>
+	</tr>
+</thead>
+<tbody>
+<% @shipped_orders.each do |o| -%>
+<tr>
+	<th class="date"><%= o.updated_at.strftime("%d %b, %y") %></th>
+	<td scope="row" class="text"><%= link_to o.name, admin_order_path(o) %></td>
+	<td class="num"><%=h number_to_currency( o.value ) %></td>
+</tr>
+<% end unless @shipped_orders.empty? -%>
+</tbody>
+</table>
+<% end -%>

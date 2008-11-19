@@ -1,0 +1,17 @@
+<h1>Pages</h1>
+<p><%= link_to "new", new_admin_page_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Page</th>
+	</tr>
+</thead>
+<tbody>
+<% @pages.each do |p| -%>
+<tr>
+	<th scope="row" class="text"><%=h p.name %> (<%=h p.permalink %>) | <%= link_to "edit", edit_admin_page_path(p) %></th>
+</tr>
+<% end -%>
+</tbody>
+</table>

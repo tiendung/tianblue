@@ -1,0 +1,11 @@
+<div class="one image" id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/sign_in.jpg" />
+</div>
+<div class="two" id="sub_content">
+<h1>Sign up as a new user</h1>
+<% @user.password = @user.password_confirmation = nil %>
+
+<%= error_messages_for :user %>
+
+<%= render :partial => "form" %>
+</div>

@@ -1,0 +1,185 @@
+/* =body */
+body { font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* =blocktext */
+h1, h2, h3, h4, h5, h6 { font-family : "Bradley Hand ITC TT", "Bradley Hand ITC", Cambria, "Times New Roman", Times, serif; }
+h1, h2, h3, h4, h5, h6, p { margin : 0 10px 0 2px; }
+li h2, li h3, li h4, li h5, li p { margin : 0 2px; }
+
+/* =h1 */
+#content h1 {
+	font-family : "Bradley Hand ITC TT", "Bradley Hand ITC", Cambria, "Times New Roman", Times, serif;
+	text-transform : uppercase; font-weight : bold;
+	font-size : 1.5em; /* 1.5*16=24px*/
+	line-height : 1.5em; /* 18*2em=36px */
+	margin-top : 0.625em;
+}
+#content div.one.image h1 {
+	font-size : 2em; /* 2*16=32px*/
+	line-height : 1.5em; /* 32*1.5em=48px */
+	margin-top : 0;
+}
+
+/* =h2 */
+h2 {
+	font-size : 1em; /* 16px*/
+	line-height : 1.125em; /* 16*1.125em=18px */
+}
+li h2 {
+	padding-bottom : 0.5625em;
+}
+ul.products li h2 span.date {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+}
+
+/* =h3 */
+/* =h4 */
+h4 {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+	padding : 0.5625em 10px 0 9px; margin : 0;
+	text-align : right;
+}
+
+/* =h5 */
+#email_signup h5 {
+	margin : 0;
+}
+
+/* =p */
+p, li p {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+	margin-bottom : 1.5em; /* 12*2.25em=27px */
+}
+p.info {
+	font-size : 0.625em; /* 0.625*16=10px*/
+	line-height : 1.8em; /* 10*1.8em=18px */
+	margin-bottom : 0; /* 10*1.8em=18px */
+	color : #666;	
+}
+div.price p {
+	font-family : "Bradley Hand ITC TT", "Bradley Hand ITC", Cambria, "Times New Roman", Times, serif;
+	font-size : 1.25em; /* 1.25*16=20px*/
+	line-height : 1.8em; /* 20*1.8=36px */
+	margin-top : 0.4em;	margin-bottom : 0;
+	text-align : right;
+	font-weight : bold;
+}
+div.price p.currency {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+	margin-top : -0.75em;
+	margin-bottom : 1.5em; /* 12*1.5em=18px */
+	font-weight : normal;
+}
+p.stock { 
+	font-size : 0.625em; /* 0.625*16=10px*/
+	line-height : 1.8em; /* 10*1.8em=18px */
+	margin-bottom : 0; /* 10*1.8em=18px */
+	color : #666;	
+	text-align : right;
+}
+ul.products li.news  p.date { color : #888; }
+
+#flash p { padding : 0.5625em 10px 0 0; margin : 0; }
+
+#content_sup p { color : #fff; text-align : right; }
+#content_sup div.price p {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+	margin-bottom : 0;
+}
+#content_sup div.price p.currency {
+	font-size : 0.625em; /* 0.625*16=10px*/
+	line-height : 1.8em; /* 10*1.8em=18px */
+	margin-bottom : 1.8em; /* 10*1.8em=18px */
+}
+
+#siteinfo p {
+	font-size : 0.625em; /* 0.875*16=12px*/
+	line-height : 1.8em; /* 12*2.25em=27px */
+	text-align : right;
+	color : #666;
+}
+
+/* =kbd/del/ins */
+/* =strong/b/em/i */
+/* =address */
+/* =pre code */
+/* =dl dt dd */
+/* =ul */
+/* =ol */
+/* =li */
+fieldset li {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+}
+#content_sup li {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*1.5em=18px */
+	padding : 0.5625em 10px 0 0; margin : 0;
+	font-family : Georgia, serif; 
+}
+
+/* =img */
+/* =hr */
+/* =a */
+a { color : #444; }
+a, a:link, a:visited, a:active {  text-decoration : none; }
+a:hover {  text-decoration : underline; color: #111;}
+#nav_main ul li a, #nav_main ul li a:link, #nav_main ul li a:visited, #nav_main ul li a:active {
+	font-family : "Bradley Hand ITC TT", "Bradley Hand ITC", Cambria, "Times New Roman", Times, serif;
+	font-size : 1em; /* 16px*/
+	line-height : 2.05em; 	padding-top : 0.2em; /* 16*2.25em=36px */
+	text-transform : uppercase; font-weight : bold;
+	color : #222; 
+}
+#nav_main ul li a:hover { background : transparent url(/images/darken.png) top left repeat-x; color : #fff; }
+#nav_sub ul li a { 
+	font-size : 0.625em; /* 0.875*16=12px*/
+	line-height : 1.8em; /* 12*2.25em=27px */
+	color : #ddd; 
+}
+#nav_sub ul li a:hover,
+#siteinfo a:hover,
+#content_sup a { color : #fff; }
+
+/* =table */
+/* =caption */
+/* =thead */
+/* =tr */
+/* =th td */
+thead th, tfoot th {
+	font-family : "Bradley Hand ITC TT", "Bradley Hand ITC", Cambria, "Times New Roman", Times, serif;
+	text-transform : uppercase; font-weight : bold;
+}
+th {
+	text-align : left;
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*2.25em=27px */
+}
+td {
+	font-size : 0.75em; /* 0.875*16=12px*/
+	line-height : 1.5em; /* 12*2.25em=27px */
+}
+tfoot td, tfoot th {
+	font-size : 0.875em; /* 0.875*16=14px*/
+	line-height : 2.5714em; /* 14*1.2857em=18px */
+	font-weight : bold;
+}
+/* =form */
+/* =fieldset */
+/* =legend */
+/* =label */
+#email_signup label {
+	font-size : 0.75em; /* 0.75*12=9px*/
+	line-height : 1.3333em; /* 9*1.3333em=12px */
+}
+/* =input */
+/* =textarea */
+/* =select */
+/* =button */
+form button { margin : 0 10px; }
+div.two form button { float : right; } /* text-align, no can */

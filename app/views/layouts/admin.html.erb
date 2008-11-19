@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="Shortcut Icon" type="image/ico" href="/favicon.ico" />
+
+<!-- =rss -->
+
+<!-- =js -->
+<% if ( js = yield :js ) -%>
+	<%= js  %>
+<% end -%>
+
+<!-- =css -->
+<link rel="stylesheet" href="/stylesheets/admin.css" type="text/css" />
+<link rel="stylesheet" href="/stylesheets/admin-print.css" type="text/css" media="print" /> 
+
+<title><%= @page_title ? @page_title + " | " : "" %>Tian Blue Admin</title>
+</head>
+
+<body id="tianblue_com" class="admin <%= "#{@page_class}" if @page_class -%>">
+
+<ul id="nav_access">
+<li><a href="#nav_main" title="access key + 0" accesskey="0">Skip to navigation</a></li>
+<li><a href="#content_main" title="access key + 1" accesskey="1">Skip main content</a></li>
+</ul>
+
+<div id="container">
+
+<%= "<div id=\"flash\"><p>" << flash[:notice] << "</p></div>" unless flash[:notice].blank? %>
+<%= "<div id=\"flash\" class=\"error\"><p>" << flash[:error] << "</p></div>" unless flash[:error].blank? %>
+
+<div id="branding">
+	<h1>Tian Blue Admin</h1>
+	<h2><a href="http://tianblue.com/" title="Home page">go to main site &#187;</a></h2>
+</div>
+
+<div id="nav_main">
+<h4>Main navigation</h4>
+<ul>
+	<li><a id="nav_categories" href="/admin/categories" title="Categories">Categories</a></li>
+	<li><a id="nav_sizes" href="/admin/sizes" title="Sizes">Sizes</a></li>
+	<li><a id="nav_products" href="/admin/products" title="Products">Products</a></li>
+	<li><a id="nav_orders" href="/admin/orders" title="Orders">Orders</a></li>
+	<li><a id="nav_users" href="/admin/users" title="Users">Users</a></li>
+	<li><a id="nav_countries" href="/admin/countries" title="Countries">Countries</a></li>
+	<li><a id="nav_pages" href="/admin/pages" title="Pages">Pages</a></li>
+	<li><a id="nav_articles" href="/admin/articles" title="News Articles">Articles</a></li>
+	<li><a id="nav_promotions" href="/promotions" title="Promotions">Promotions</a></li>
+</ul>
+</div>
+
+<div id="content">
+
+<div id="content_main">
+
+<%= yield :layout %>
+
+</div>
+
+<div id="content_sub">
+
+<% if ( sub = yield :sub ) -%>
+	<%= sub  %>
+<% end -%>
+
+</div> <!-- #content_sub -->	
+
+<div id="content_sup">
+
+<% if ( sup = yield :sup ) -%>
+	<%= sup  %>
+<% end -%>
+
+</div> <!-- #content_sup -->
+
+</div> <!-- #content -->
+
+<div id="nav_sub">
+<!-- <h4>Sub Navigation</h4>
+<ul>
+<li><a id="sub_" href="" title=""></a></li>
+</ul> -->
+</div> <!-- #nav_sub -->
+
+<div id="siteinfo">
+
+<p>built by <a id="deepcalm" href="http://deepcalm.com/">deepcalm.com</a> | <a href="#branding">back to top</a></p>
+
+</div> <!-- #siteinfo -->
+
+</div> <!-- #container -->
+
+</body>
+</html>

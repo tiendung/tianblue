@@ -1,0 +1,17 @@
+<h1><%= @page_title %></h1>
+<p><%= link_to "new", new_admin_category_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Category</th>
+	</tr>
+</thead>
+<tbody>
+<% @categories.each do |c| -%>
+<tr>
+	<th scope="row" class="text"><%=h c.name %> | <%= link_to "edit", edit_admin_category_path(c) %></th>
+</tr>
+<% end -%>
+</tbody>
+</table>

@@ -1,0 +1,12 @@
+<div class="one"  id="main_cat_img">
+	<% @images.each do |i| %>
+		<%= image_tag i.public_filename(:main), :height=>400, :width=>320 %>
+		<br /><br />
+	<% end unless @images.empty? -%>
+</div>
+
+<div class="two" id="sub_content">
+<h1><%=h @page_title %></h1>
+<%= @article.html_body %>
+<p><%= link_to "Other News Stories", news_index_path %></p>
+</div>

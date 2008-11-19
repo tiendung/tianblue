@@ -1,0 +1,19 @@
+<h1><%= @page_title %></h1>
+<p><%= link_to "new", new_admin_user_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Name</th>
+		<th scope="col" class="text">Email</th>
+	</tr>
+</thead>
+<tbody>
+<% @users.each do |u| -%>
+<tr>
+	<th scope="row" class="text"><%=h u.login %> <%= "(#{u.name})" if u.name? %> | <%= link_to "edit", edit_admin_user_path(u) %></th>
+	<td class="text"><%=h u.email %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>

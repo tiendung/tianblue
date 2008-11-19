@@ -1,0 +1,71 @@
+<% content_for :js do %>
+$(document).ready(function() {
+	$("ul.thumbs a").click(function() {
+		$this = $(this)
+		$("img.main").stop().fadeOut("fast", function() {
+			$("img.main").attr("src", $this.attr("href")).fadeIn("slow");
+		});
+		return false;
+	});
+});
+<% end -%>
+
+
+<% unless @product.images.empty? -%>
+  <%= image_tag @product.images[0].public_filename(:main), :width=>320, :height=>400, :id=>"main_img", :class => "main" %>
+<% end -%>
+
+<div class="two">
+<h1><%=h @product.name %></h1>
+<%= @product.html_description %>
+
+<!-- <div class="price">
+<% if current_user_promotion and current_user_promotion.is_valid %>
+	<p class="text_info">Discount Price: <%=h number_to_currency( current_user_promotion.apply(@product.price) ) %><br />(with <%= current_user_promotion.discount_percentage.to_f %>% discount)</p>
+	<p class="text_info">Normal price: <%=h number_to_currency( @product.price ) %></p>
+<% else %>
+  <p class="text_info"><%=h number_to_currency( @product.price ) %></p>
+<% end %>
+<p class="currency"><abbr title="United States Dollars">USD</abbr></p>
+</div> -->
+
+<table cellspacing="0" id="stock_units">
+<tbody>
+<% form_for :cart_item, :url => cart_items_path, :method => :post do |f| %>
+<tr>
+	<td>SIZE</td>
+	<td><%= f.select :sku, @stock_units.collect {|s| [ s.size_name, s.sku ] } %></td>
+</tr>
+<tr>
+	<td class="num">QUANTITY</td>
+	<td class="num"><%= f.text_field :quantity %></td>
+</tr>
+<tr>
+	<td>PRICE</td>
+	<td>
+		<% if current_user_promotion and current_user_promotion.is_valid %>
+			<p class="text_info"><%=h number_to_currency( current_user_promotion.apply(@product.price) ) %> (with <%= current_user_promotion.discount_percentage.to_f %>% discount)</p>
+		<% else %>
+		  <p class="text_info"><%=h number_to_currency( @product.price ) %></p>
+		<% end %>
+	</td>
+</tr>
+<tr>
+	<td></td>
+	<td><%= f.submit "Add to Basket" %></td>
+</td>
+<% end -%>
+
+</tbody>
+</table>
+
+<br />
+<% if @product.images.size > 1 %>
+<ul class="thumbs">
+	<% @product.images.each do |i| %>
+	  <li><%= link_to image_tag(i.public_filename(:thumb), :width=>80, :height=>100), i.public_filename(:main) %></li>
+	<% end -%>
+</ul>
+<% end -%>
+
+</div>

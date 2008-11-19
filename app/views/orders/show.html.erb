@@ -1,0 +1,58 @@
+<div class="image one" id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/holding3.jpg" />
+</div>
+
+<div class="two" id="sub_content">
+<h1>Order: <%= @order.created_at.strftime("%e %b %Y") %></h1>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Product</th>
+		<th scope="col" class="num">Quantity</th>
+		<th scope="col" class="num">Price</th>
+	</tr>
+</thead>
+<tfoot>
+	<tr>
+		<th scope="row" colspan="2"  class="num">Total Cost</th>
+		<td class="num"><%=h number_to_currency( @order.value ) %></td>
+	</tr>
+</tfoot>
+<tbody>
+<% @items.each do |i| -%>
+<tr>
+	<th scope="row" class="text"><%=h i.name %></th>
+	<td class="num"><%=h i.quantity %></td>
+	<td class="num"><%=h number_to_currency( i.price ) %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>
+
+<% if @order.pending? -%>
+<p>We checkout using Worldpay to ensure all our transactions are secure.</p>
+<p><img src="/images/cc_visa.gif" width="37" height="23" alt="Visa"> <img src="/images/cc_mc.gif" width="37" height="23" alt="Mastercard"> <!-- <img src="/images/cc_amex.gif" width="37" height="23" alt="American Express"> --></p>
+<form action="https://select.worldpay.com/wcc/purchase" method="post">
+<!-- Test mode -->
+	<input type="hidden" name="testMode" value="0">
+<!-- -->
+	<input type="hidden" name="instId" value="133248">
+	<input type="hidden" name="cartId" value="<%= @order.id %>">
+	<input type="hidden" name="amount" value="<%= @order.value %>">
+	<input type="hidden" name="currency" value="USD">
+	<input type="hidden" name="name" value="<%= @order.name %>">
+	<input type="hidden" name="address" value="<%= @order.address %>">
+	<input type="hidden" name="postcode" value="<%= @order.postcode %>">
+	<input type="hidden" name="country" value="<%= @order.country.a2 %>">
+	<input type="hidden" name="email" value="<%= @order.email || @current_user.email %>">
+	<div class="buttons">
+		<input type="submit" value="Buy This using WorldPay">
+	</div>
+</form>
+<% else -%>
+<h3><%=h @order.status %></h3>
+<h4>REF: <%=h @order.transaction_reference %></h4>
+<% end -%>
+
+</div>

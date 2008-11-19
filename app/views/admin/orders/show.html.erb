@@ -1,0 +1,41 @@
+<h1>Order: <%=h @order.id %> - <%= @order.created_at.strftime("%d %b, %y") %></h1>
+
+<h2>Value: <%=h number_to_currency( @order.value ) %></h2>
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Product</th>
+		<th scope="col" class="num">Quantity</th>
+	</tr>
+</thead>
+<tbody>
+<% @items.each do |i| -%>
+<tr>
+	<th scope="row" class="text"><%=h i.name %></th>
+	<td class="num"><%=h i.quantity %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>
+
+<% content_for :sub do -%>
+<div class="delete">
+<%= button_to "Delete order - BE CAREFUL!!!", admin_order_path(@order), :method => :delete %>
+</div>
+<p><%=h @order.name %> (<%= link_to @order.user.email, admin_user_path(@order.user) %>)</p>
+<p><%=h @order.address %></p>
+<p><%=h @order.postcode %></p>
+<p><strong><%=h @order.country.name %></strong></p>
+<h3>Status : <%=h @order.status %></h3>
+<h4>Worldpay Ref : <%=h @order.transaction_reference %></h4>
+<% proper_form_for :order, :url => admin_order_path(@order.id), :html => {:method => :put} do |f| -%>
+	<% fieldset do -%>
+	<%= f.select :status, ["PAID","SHIPPED","CANCELLED"] %>
+	<% end -%>
+	<% fieldset :class => "submit" do -%>
+	<%= f.submit "Change Status" %>
+	<% end -%>
+<% end -%>
+
+
+<% end -%>

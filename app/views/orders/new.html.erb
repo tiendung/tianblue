@@ -1,0 +1,39 @@
+<div class="image one"  id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/holding1.jpg" />
+</div>
+
+<div class="two" id="sub_content">
+<h1>Checkout</h1>
+
+<h2>Total Price: <%=h number_to_currency(current_user_promotion ? current_user_promotion.apply(@cart.price) : @cart.price) %> (<%=h @cart.number_of_items %> items)</h2>
+<br />
+
+<% if not logged_in? 
+		 session[:return_to] = request.request_uri
+%>
+<h3>Please login if you are a member</h3>
+<%= render :partial => "sessions/form" %>
+<br />
+<h3>Or just fill out the form and checkout</h3>
+<% end %>
+
+<%= error_messages_for :order %>
+
+<% form_for :order, :url => orders_path do |f| -%>
+<% fieldset do -%>
+<ol>
+	<li><label>Name</label><%= f.text_field :name %></li>
+	<li><label>Email</label><%= f.text_field :email %></li>
+	<li><label>Phone</label><%= f.text_field :phone %></li>
+	<li><label>Address</label><%= f.text_area :address, :rows => 5 %></li>
+	<li><label>Postcode</label><%= f.text_field :postcode %></li>
+	<li><label>Country</label><%= f.select :country_id, Country.find(:all, :order=>"name ASC").collect {|c| [ c.name, c.id ] }, {:include_blank=>true} %></li>
+	<li><label> </label><%= f.check_box :receive_update %> I would like to receive Tianblue updates via email</li>
+</ol>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Checkout" %>
+<% end -%>
+<% end -%>
+</div>

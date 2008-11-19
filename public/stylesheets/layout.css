@@ -1,0 +1,169 @@
+@import "reset.css";
+@import "typography.css";
+
+/* =html */
+/* =body */
+body { background : #020308 url(/images/body.jpg) top center no-repeat; }
+
+/* =blocktext */
+/* =h1 */
+/*div.one.image h1 { position : absolute; bottom : 10px ; right : 10px; color : #fafafa;}
+*/
+/* =h2 */
+/* =h3 */
+/* =h4 */
+#nav_main h4, #nav_sub h4 { position : absolute; top : -9999px; }
+
+/* =h5 */
+#email_signup h5 {
+	width : 200px;
+	padding-right : 9px;
+	float : left;
+}
+
+/* =p */
+/* =kbd/del/ins */
+/* =strong/b/em/i */
+/* =address */
+/* =pre code */
+/* =dl dt dd */
+/* =ul */
+#nav_main ul {
+	list-style: none;
+	height: 40px;
+  margin: 0; padding: 0;
+	background: transparent url(/images/nav_main.png) top right no-repeat;
+}
+ul.thumbs { position : absolute; bottom : 0; left : 436px; }
+
+/* =ol */
+/* =li */
+#nav_main ul li.current {  }
+#nav_main ul li:hover {  }
+#nav_main ul li { float:left; margin : 0; }
+#nav_main ul li.last { float : right; margin-right : 7px; }
+ul.thumbs li { float:left; margin : 0 9px 0 0; }
+ul.products li { float : left ; width : 209px; margin : 0 9px 18px 0;}
+ul.products li.news { float : right; width : 414px; margin-right : 18px; }
+fieldset ol li { clear : left; }
+#nav_sub ul li { float:left; margin : 0; }
+
+/* =img */
+img {
+	padding : 1px; border : 1px solid #666;
+}
+
+/* =hr */
+/* =a */
+#branding h1 a {
+	display : block;
+	position : absolute; top : 0; left : -10px; z-index : 100;
+	width : 110px; height : 230px;
+	background : transparent url(/images/branding_h1.png) top left no-repeat; text-indent : -9999em;
+}
+#nav_main ul li a {
+	float:left;
+	display:block;
+	text-decoration:none;
+	padding : 0 12px;
+	border-right : 1px solid #666;
+}
+#nav_main ul li.last a {
+	border-left : 1px solid #666; border-right : 0;
+}
+.men a#nav_mens,
+.ladies a#nav_ladies,
+.children a#nav_children,
+.t-shirts a#nav_tshirts,
+.caps a#nav_caps { background : transparent url(/images/lighten.png) top left repeat-x; }
+#nav_sub ul li a {
+	float:left;
+	display:block;
+	text-decoration:none;
+	padding : 0 6px;
+}
+ul.products li h2 a { color : #000; }
+ul li.news a.image { float : left; margin : 0 12px 9px 0;}
+
+
+/* =table */
+table#stock_units {
+	float : right;
+}
+/* =caption */
+/* =thead */
+/* =tr */
+tr { padding : .5em 0; }
+
+/* =th td */
+th, td { padding : 0 9px 0 0; vertical-align : top; text-align : left; }
+thead th { font-weight : bold; text-transform : uppercase; }
+tbody th { width : auto; font-weight : normal; }
+th.num, td.num { width : 100px ; text-align : right; }
+th.text, td.text { width : 152px ; }
+th.date, td.date { width : 100px ; }
+
+/* =form */
+#content_main form { padding-top : 10px; }
+#content_main table form { padding-top : 0; }
+div.buttons { text-align : right; padding : 0 10px 10px 0;}
+
+/* =fieldset */
+fieldset.submit { padding : 3px 0 0 109px;}
+#email_signup fieldset.submit { padding-left : 209px;}
+
+/* =legend */
+label {
+	font-weight : bold; text-align : right;
+	display : block; float : left; clear : left;
+	width : 100px; padding-right : 9px;
+}
+#email_signup label {
+	font-weight : normal; text-align : left;
+	float : none;
+	width : auto; padding : 0;
+}
+
+/* =input */
+input[type=text], input[type=password], input[type=file], textarea {
+	width : 203px;
+	padding: 2px; border: 1px solid #bbb;
+}
+#email_signup input[type=text] {
+	width : 184px;
+}
+td.num input[type=text] { width : 50px ; text-align : right; }
+
+/* =textarea */
+/* =select */
+/* =button */
+/* =div */
+#nav_access a { 
+	display: block; 
+	position: absolute; top:0; left: -999px; 
+	padding: 10px 20px; 
+} 
+#nav_access a:focus { left: 0; }
+
+#container { position: relative; margin : 0 auto; width : 881px; }
+#flash { position : absolute; top : 0; left : 109px; color : #fff; }
+#branding { height : 94px; }
+#nav_main { width : 812px; position : absolute; top : 60px; right : -18px; z-index : 50; }
+#content { padding-left : 9px; background : #fff; }
+#content_main { }
+#content_main div.one, #content_main div.two { width : 436px; }
+.home #content_main div.one, .home #content_main div.two { width : auto; float : none; }
+#content_main div.one { float : left; position : relative; }
+#content_main div.two { float : right; }
+#content_sub { clear : both; padding : 10px 0; }
+#email_signup {
+	clear : both;
+	width : 406px;
+	padding : 10px;
+	background : #eee;
+}
+
+#content_sup { position : absolute; top : 0; right : 0; }
+#cart { position : absolute; top : 0; right : -15px; padding-right : 15px; background : transparent url(/images/content_sup.png) 100% 2px no-repeat; width : 200px;}
+#usermenu { position : absolute; top : 0; right : 115px; width : 200px;}
+#usermenu ul li { float : right; text-align : right; }

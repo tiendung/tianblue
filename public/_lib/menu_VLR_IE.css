@@ -1,0 +1,17 @@
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu, .menu ul {	/* float.clear */
+	zoom: 1;
+}
+
+.menu li.adxmhover {
+	z-index: 10000;
+}
+
+.menu .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu .adxmhoverUL {	/* submenu goes to the right */
+	left: 100%;
+}

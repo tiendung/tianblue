@@ -1,0 +1,67 @@
+
+tom:
+  id:                        1
+  login:                     tphutton
+  email:                     tphutton@tianblue.com
+  salt:                      356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
+  crypted_password:          367a09ad2c9b8f905ff1cc50de4b3d001beef53e # 'monkey'
+  created_at:                <%= 5.days.ago.to_s :db  %>
+  remember_token_expires_at: <%= 1.days.from_now.to_s %>
+  remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+  activation_code:           
+  activated_at:              <%= 5.days.ago.to_s :db %>
+  is_admin:                  true
+  state:                     active
+      
+quentin:
+  id:                        2
+  login:                     quentin
+  email:                     quentin@example.com
+  salt:                      356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
+  crypted_password:          367a09ad2c9b8f905ff1cc50de4b3d001beef53e # 'monkey'
+  created_at:                <%= 5.days.ago.to_s :db  %>
+  remember_token_expires_at: <%= 1.days.from_now.to_s %>
+  remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+  activation_code:           
+  activated_at:              <%= 5.days.ago.to_s :db %>
+  is_admin:                  false
+  state:                     active
+
+aaron:
+  id:                        3
+  login:                     aaron
+  email:                     aaron@example.com
+  salt:                      da4b9237bacccdf19c0760cab7aec4a8359010b0 # SHA1('1')
+  crypted_password:          26817c8bc1b520b8ed3304e35bb98a5fc597b2f5 # 'monkey'
+  created_at:                <%= 1.days.ago.to_s :db %>
+  remember_token_expires_at: 
+  remember_token:            
+  activation_code:           1b6453892473a467d07372d45eb05abc2031647a
+  activated_at:              
+  is_admin:                  false
+  state:                     pending
+
+# == Schema Info
+# Schema version: 20080930130231
+#
+# Table name: users
+#
+#  id                        :integer(11)     not null, primary key
+#  promotion_id              :integer(11)
+#  activation_code           :string(40)
+#  crypted_password          :string(40)
+#  email                     :string(100)
+#  is_admin                  :boolean(1)
+#  login                     :string(40)
+#  name                      :string(100)     default("")
+#  password_reset_code       :string(40)
+#  receive_update            :boolean(1)      default(TRUE)
+#  remember_token            :string(40)
+#  salt                      :string(40)
+#  state                     :string(255)     default("passive")
+#  activated_at              :datetime
+#  created_at                :datetime
+#  deleted_at                :datetime
+#  remember_token_expires_at :datetime
+#  updated_at                :datetime
+

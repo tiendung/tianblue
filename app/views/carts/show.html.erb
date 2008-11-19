@@ -1,0 +1,56 @@
+<div class="image one" id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/holding1.jpg" />
+</div>
+
+<div class="two" id="sub_content">
+<h1>Shopping Basket</h1>
+
+<% unless @cart.empty? -%>
+<table cellspacing="0">
+<tfoot>
+	<tr>
+		<th>Total Cost</th>
+		<td><strong><%=h number_to_currency( current_user_promotion ? current_user_promotion.apply(@cart.price) : @cart.price ) %></strong></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><%= button_to 'Checkout', checkout_url, :method => :get %></td>
+		<td><%= button_to 'Empty Basket', cart_path, :method => :delete %></td> <!-- <img src="/images/icons/cross.png" alt="" />  -->
+	</tr>
+</tfoot>
+<thead>
+	<tr>
+		<th scope="col" class="text">Product</th>
+		<th scope="col" class="num"><%= current_user_promotion ? "Discount Price" : "Price" %></th>
+		<th scope="col" class="num">Quantity</th>
+	</tr>
+</thead>
+<tbody>
+
+<% @cart_items.each do |i| -%>
+<tr>
+	<th scope="row" class="text"><%=h i.name %></th>
+	<td class="num"><%=h number_to_currency( current_user_promotion ? current_user_promotion.apply(i.price) : i.price ) %></td>
+	<td class="num"><%=h i.quantity %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>
+<br />
+<h3>Secure Checkout</h3>
+<p>We checkout using Worldpay to ensure all our transactions are secure.</p>
+<p><img src="/images/cc_visa.gif" width="37" height="23" alt="Visa"> <img src="/images/cc_mc.gif" width="37" height="23" alt="Mastercard"> <!--<img src="/images/cc_amex.gif" width="37" height="23" alt="American Express">--></p>
+
+<h3>Free Shipping Worldwide</h3>
+<p>Tianblue uses <a href="http://dhl.com">DHL</a> to ensure your purchases reach you safely, wherever you are.</p>
+<p><img src="/images/dhl.jpg" width="100" height="38" alt="DHL"></p>
+<p>Please view our <a href="/terms-and-conditions">terms and conditions</a> and contact <a href="mailto:info@tianblue.com">info@tianblue.com</a> if you have any queries.</p>
+
+
+<% else -%>
+
+<h2>You have no items in your cart</h2>
+
+<% end -%>
+
+</div>

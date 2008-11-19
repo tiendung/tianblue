@@ -1,0 +1,34 @@
+<h1>Editing promotion</h1>
+
+<% form_for(@promotion) do |f| %>
+  <%= f.error_messages %>
+
+	<% fieldset do -%>
+	<ol>
+		<li><%= f.label :promotion_code %>
+				<%= f.text_field :promotion_code %></li>
+
+    <li><%= f.label :promotion_name %>
+				<%= f.text_field :promotion_name %></li>
+
+		<li><%= f.label :greeting %>
+				<%= f.text_area :greeting, :rows => 10 %></li>
+
+    <li><%= f.label :discount_percentage %>
+				<%= f.text_field :discount_percentage %></li>
+
+    <li><%= f.label :valid_from %>
+				<%= f.date_select :valid_from %></li>
+
+    <li><%= f.label :valid_until %>
+				<%= f.date_select :valid_until %></li>
+
+    <li><%= f.label :activate_now %>
+				<%= f.check_box :activate_now %></li>
+
+	</ol>
+	<% end %>	
+  <%= f.submit "Update" %>
+<% end %>
+
+<%= link_to 'Back', promotions_path %>

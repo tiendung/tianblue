@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  a2: MyString
+  a3: MyString
+  numeric: 1
+
+two:
+  name: MyString
+  a2: MyString
+  a3: MyString
+  numeric: 1
+# == Schema Info
+# Schema version: 20080930130231
+#
+# Table name: countries
+#
+#  id         :integer(11)     not null, primary key
+#  a2         :string(255)
+#  a3         :string(255)
+#  name       :string(255)
+#  numeric    :integer(11)
+#  created_at :datetime
+#  updated_at :datetime
+

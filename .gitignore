@@ -1,0 +1,12 @@
+.DS_Store
+.ruby_inline/*
+config/database.yml
+config/environments/development.rb 
+public/images/**/*
+tmp/**/*
+log/*.log
+db/*.sqlite3
+public/product_images/**/*
+public/category_images/**/*
+public/page_images/**/*
+public/article_images/**/*

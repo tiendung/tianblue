@@ -1,0 +1,21 @@
+<div id="left_col">
+
+	<div id="sub_menu">
+		<a href="/home"><img title="Home" src="/img/mn_home.jpg" /></a>
+		<a href="/stockists"><img title="Stocklist" src="/img/mn_stock.jpg" /></a>
+		<a href="/news"><img title="Tianblue news" src="/img/mn_news.jpg" /></a>														
+		<a href="/sizing-guide"><img title="Sizing" src="/img/mn_size.jpg" /></a>									
+	
+		&nbsp;<br /><br /><br /><br />
+
+			<a href="/cart" style="font-size: 1.5em;">CHECKOUT</a>
+			<% if @cart %>
+				<p style="font-size: 1em;">
+					<%= pluralize @cart.number_of_items, "item" %>,
+				 	<%=h number_to_currency( current_user_promotion ? current_user_promotion.apply(@cart.price) : @cart.price ) %>
+				</p>
+			<% end %>
+	</div>
+	
+	<img id="free_shipping" src="/img/free_shipping.gif" />
+</div>

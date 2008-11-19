@@ -1,0 +1,28 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for(:page, :url => admin_page_path(@page), :html=> {:method => :put} ) do |f| %>
+
+<% fieldset do -%>
+	<%= f.text_field :name %>
+	<%= f.text_area :body %>
+	<%= f.text_field :permalink %>
+<% end -%>
+
+<% fieldset( :class => "submit" ) do -%>
+<%= f.submit "Update" %> | <%= link_to "back to pages list", admin_pages_path %>
+<% end -%>
+
+<% end -%>
+
+<% content_for :sub do -%>
+<h2>Image</h2>
+<% if @image -%>
+<ul class="images">
+	<li>
+		<img src="<%= @image.public_filename(:thumb) %>" alt="" />
+		<%= button_to "Delete", admin_page_image_path(@page), :method => :delete %>
+	</li>
+</ul>
+<% end -%>
+<p><%= link_to "Add a new image", new_admin_page_image_path(@page) %></p>
+<% end -%>

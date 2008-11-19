@@ -1,0 +1,4 @@
+<li>
+	<%= link_to image_tag(product.mini_image_filename, :width=>156, :height=>190), product_path(product) if product.mini_image_filename -%>
+	<h2><%= link_to product.name.upcase, product_path(product) %></h2>
+</li>

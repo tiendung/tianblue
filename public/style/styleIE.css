@@ -1,0 +1,38 @@
+/* === Global IE stylesheet === */
+
+/* Form legend alignment */
+form legend {
+margin-bottom: 15px;
+margin-left: -8px !important;
+}
+
+body.listing #filter fieldset#submit input {
+padding: 2px 10px 1px;
+margin-top: 18px !important;
+}
+
+body.alert #loginbox fieldset {
+background-position: 18px left;
+}
+
+body.alert #content #loginbox label,
+body.alert #content #loginbox input {
+width: 130px;
+}
+
+body.alert #content #loginbox label {
+width: 60px;
+}
+
+body#home #quicksearch2 .checkboxsearch p {
+height: 13px;
+}
+
+body#home #quicksearch2 .checkboxsearch p input {
+height: 13px;
+vertical-align: bottom;
+}
+
+body.detail #infoform fieldset label {
+width: 138px;
+}

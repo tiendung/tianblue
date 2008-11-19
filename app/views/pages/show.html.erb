@@ -1,0 +1,10 @@
+<% if @image -%>
+<div id="main_cat_img">
+	<%= image_tag @image.public_filename(:main), :width=>320, :height=>400, :class => "main" %>
+</div>
+<% end -%>
+
+<div id="sub_content">
+  <h1><%= @page_title %></h1>
+  <%= @page.html_body %>
+</div>

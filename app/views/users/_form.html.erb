@@ -1,0 +1,23 @@
+<% if @promotion %>
+		<%= @promotion.greeting %> with <%= @promotion.discount_percentage%>% discount.
+<% end %>
+
+<% form_for :user, :url => users_path do |f| -%>
+
+<% if @promotion %>
+		<input type="hidden" value="<%=@promotion.id%>" name="promotion_id"/>
+<% end %>
+
+<% fieldset do -%>
+	<li><label>Name</label><%= f.text_field :name %></li>
+	<li><label>Login</label><%= f.text_field :login %></li>
+	<li><label>Email</label><%= f.text_field :email %></li>
+	<li><label>Password</label><%= f.password_field :password %></li>
+	<li><label>Password Comfirmation</label><%= f.password_field :password_confirmation %></li>
+	<li><%= f.check_box :receive_update %> I would like to receive Tianblue updates via email</li>
+<% end -%>
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Sign up" %>
+<% end -%>
+
+<% end -%>

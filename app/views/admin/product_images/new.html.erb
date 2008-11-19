@@ -1,0 +1,13 @@
+<h1><%=h @page_title %></h1>
+
+<% proper_form_for :image, :url => admin_product_images_path(@product), :html => { :multipart => true } do |f| -%>
+
+<% fieldset do -%>
+<%= f.file_field :uploaded_data, :label => "Select Image" %>
+<% end -%>
+
+<% fieldset :class => "buttons" do -%>
+<%= f.submit "Create" %> | <%= link_to "back to edit product", edit_admin_product_path(@product) %> | <%= link_to "back to products list", admin_products_path %>
+<% end -%>
+
+<% end -%>

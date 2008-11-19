@@ -1,0 +1,33 @@
+<p>
+  <b>Promotion code:</b>
+  <%=h @promotion.promotion_code %>
+</p>
+
+<p>
+  <b>Promotion name:</b>
+  <%=h @promotion.promotion_name %>
+</p>
+
+<p>
+  <b>Discount percentage:</b>
+  <%=h @promotion.discount_percentage %>
+</p>
+
+<p>
+  <b>Valid from:</b>
+  <%=h @promotion.valid_from %>
+</p>
+
+<p>
+  <b>Valid until:</b>
+  <%=h @promotion.valid_until %>
+</p>
+
+<p>
+  <b>Activate now:</b>
+  <%=h @promotion.activate_now %>
+</p>
+
+
+<%= link_to 'Edit', edit_promotion_path(@promotion) %> |
+<%= link_to 'Back', promotions_path %>

@@ -1,0 +1,28 @@
+<div id="menu">	
+
+	<div id="login">
+		<ul class="menu">
+      <% if logged_in? -%>
+
+      	<li><%= link_to 'Logout', logout_url %></li>
+      	<li><%= link_to 'Previous Orders', orders_path %></li>
+
+      <% else %>
+
+        <!-- <li id="log"><%= link_to 'Login', login_url %></li>
+        <li id="signup"><%= link_to 'Signup', signup_url %></li> -->
+
+      <% end %>
+		</ul>
+	</div>
+
+
+  <ul class="adxm menu">
+  	<li id="ladies" class="first"><a href="/category/ladies">Ladies</a></li>
+  	<li id="men"><a href="/category/men">Men's</a></li>
+  	<li id="children"><a href="/category/children">Children's</a></li>
+  	<li id="cap"><a href="/category/caps">Caps</a></li>
+  	<li id="about" class="last"><a href="/about-us">About Us</a></li>																								
+  </ul>							
+
+</div>

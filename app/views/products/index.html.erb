@@ -1,0 +1,14 @@
+<% if @image -%>
+<div id="main_cat_img">
+  <h1 id="title"><%= @page_title.upcase %></h1>
+	<%= image_tag @image.public_filename(:main), :width=>320, :height=>400, :class=>"main" %>
+</div>
+<% end -%>
+
+<div id="sub_content">
+<ul class="products">
+<% @products.each do |p| -%>
+  <%= render :partial => 'product', :locals => {:product => p} %>
+<% end -%>
+</ul>
+</div>

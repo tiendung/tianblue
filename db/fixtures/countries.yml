@@ -1,0 +1,407 @@
+ar:
+  name: Argentina
+  a2: AR
+  a3: ARG
+  numeric: 32
+
+au:
+  name: Australia
+  a2: AU
+  a3: AUS
+  numeric: 36
+
+br:
+  name: Brazil
+  a2: BR
+  a3: BRA
+  numeric: 76
+
+ca:
+  name: Canada
+  a2: CA
+  a3: CAN
+  numeric: 124
+
+cn:
+  name: China
+  a2: CN
+  a3: CHN
+  numeric: 156
+
+dk:
+  name: Denmark
+  a2: DK
+  a3: DNK
+  numeric: 208
+
+eg:
+  name: Egypt
+  a2: EG
+  a3: EGY
+  numeric: 818
+
+fi:
+  name: Finland
+  a2: FI
+  a3: FIN
+  numeric: 246
+
+fr:
+  name: France
+  a2: FR
+  a3: FRA
+  numeric: 250
+
+de:
+  name: Germany
+  a2: DE
+  a3: DEU
+  numeric: 276
+
+gi:
+  name: Gibraltar
+  a2: GI
+  a3: GIB
+  numeric: 292
+
+gr:
+  name: Greece
+  a2: GR
+  a3: GRC
+  numeric: 300
+
+gl:
+  name: Greenland
+  a2: GL
+  a3: GRL
+  numeric: 304
+
+gg:
+  name: Guernsey
+  a2: GG
+  a3: GGY
+  numeric: 831
+
+hk:
+  name: Hong Kong
+  a2: HK
+  a3: HKG
+  numeric: 344
+
+hu:
+  name: Hungary
+  a2: HU
+  a3: HUN
+  numeric: 348
+
+is:
+  name: Iceland
+  a2: IS
+  a3: ISL
+  numeric: 352
+
+in:
+  name: India
+  a2: IN
+  a3: IND
+  numeric: 356
+
+id:
+  name: Indonesia
+  a2: ID
+  a3: IDN
+  numeric: 360
+
+ie:
+  name: Ireland
+  a2: IE
+  a3: IRL
+  numeric: 372
+
+il:
+  name: Israel
+  a2: IL
+  a3: ISR
+  numeric: 376
+
+it:
+  name: Italy
+  a2: IT
+  a3: ITA
+  numeric: 380
+
+jp:
+  name: Japan
+  a2: JP
+  a3: JPN
+  numeric: 392
+
+je:
+  name: Jersey
+  a2: JE
+  a3: JEY
+  numeric: 832
+
+kr:
+  name: Korea, South
+  a2: KR
+  a3: KOR
+  numeric: 410
+
+kw:
+  name: Kuwait
+  a2: KW
+  a3: KWT
+  numeric: 414
+
+lu:
+  name: Luxembourg
+  a2: LU
+  a3: LUX
+  numeric: 442
+
+mo:
+  name: Macau
+  a2: MO
+  a3: MAC
+  numeric: 446
+
+mk:
+  name: Macedonia
+  a2: MK
+  a3: MKD
+  numeric: 807
+
+my:
+  name: Malaysia
+  a2: MY
+  a3: MYS
+  numeric: 458
+
+mv:
+  name: Maldives
+  a2: MV
+  a3: MDV
+  numeric: 462
+
+mt:
+  name: Malta
+  a2: MT
+  a3: MLT
+  numeric: 470
+
+mx:
+  name: Mexico
+  a2: MX
+  a3: MEX
+  numeric: 484
+
+fm:
+  name: Micronesia
+  a2: FM
+  a3: FSM
+  numeric: 583
+
+md:
+  name: Moldova
+  a2: MD
+  a3: MDA
+  numeric: 498
+
+mc:
+  name: Monaco
+  a2: MC
+  a3: MCO
+  numeric: 492
+
+me:
+  name: Montenegro
+  a2: ME
+  a3: MNE
+  numeric: 499
+
+nl:
+  name: Netherlands
+  a2: NL
+  a3: NLD
+  numeric: 528
+
+nz:
+  name: New Zealand
+  a2: NZ
+  a3: NZL
+  numeric: 554
+
+no:
+  name: Norway
+  a2: 'NO'
+  a3: NOR
+  numeric: 578
+
+om:
+  name: Oman
+  a2: OM
+  a3: OMN
+  numeric: 512
+
+pk:
+  name: Pakistan
+  a2: PK
+  a3: PAK
+  numeric: 586
+
+pa:
+  name: Panama
+  a2: PA
+  a3: PAN
+  numeric: 591
+
+ph:
+  name: Philippines
+  a2: PH
+  a3: PHL
+  numeric: 608
+
+pl:
+  name: Poland
+  a2: PL
+  a3: POL
+  numeric: 616
+
+pt:
+  name: Portugal
+  a2: PT
+  a3: PRT
+  numeric: 620
+
+qa:
+  name: Qatar
+  a2: QA
+  a3: QAT
+  numeric: 634
+
+ro:
+  name: Romania
+  a2: RO
+  a3: ROU
+  numeric: 642
+
+ru:
+  name: Russian Federation
+  a2: RU
+  a3: RUS
+  numeric: 643
+
+sa:
+  name: Saudi Arabia
+  a2: SA
+  a3: SAU
+  numeric: 682
+
+rs:
+  name: Serbia
+  a2: RS
+  a3: SRB
+  numeric: 688
+
+sg:
+  name: Singapore
+  a2: SG
+  a3: SGP
+  numeric: 702
+
+sk:
+  name: Slovakia
+  a2: SK
+  a3: SVK
+  numeric: 703
+
+si:
+  name: Slovenia
+  a2: SI
+  a3: SVN
+  numeric: 705
+
+za:
+  name: South Africa
+  a2: ZA
+  a3: ZAF
+  numeric: 710
+
+es:
+  name: Spain
+  a2: ES
+  a3: ESP
+  numeric: 724
+
+lk:
+  name: Sri Lanka
+  a2: LK
+  a3: LKA
+  numeric: 144
+
+se:
+  name: Sweden
+  a2: SE
+  a3: SWE
+  numeric: 752
+
+ch:
+  name: Switzerland
+  a2: CH
+  a3: CHE
+  numeric: 756
+
+tw:
+  name: Taiwan
+  a2: TW
+  a3: TWN
+  numeric: 158
+
+th:
+  name: Thailand
+  a2: TH
+  a3: THA
+  numeric: 764
+
+tn:
+  name: Tunisia
+  a2: TN
+  a3: TUN
+  numeric: 788
+
+ua:
+  name: Ukraine
+  a2: UA
+  a3: UKR
+  numeric: 804
+
+ae:
+  name: United Arab Emirates
+  a2: AE
+  a3: ARE
+  numeric: 784
+
+uk:
+  name: United Kingdom
+  a2: GB
+  a3: GBR
+  numeric: 826
+
+us:
+  name: United States of America
+  a2: US
+  a3: USA
+  numeric: 840
+
+vn:
+  name: Vietnam
+  a2: VN
+  a3: VNM
+  numeric: 704
+
+zw:
+  name: Zimbabwe
+  a2: ZW
+  a3: ZWE
+  numeric: 716

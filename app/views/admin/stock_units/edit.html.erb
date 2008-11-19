@@ -1,0 +1,14 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for(@stock_unit, :url => admin_product_stock_unit_path(@product, @stock_unit), :method => :put ) do |f| %>
+
+<% fieldset do -%>
+	<%= f.text_field :stock %>
+	<%= f.select :size_id, Size.all.collect {|s| [ s.name, s.id ] }, { :include_blank => false } %>
+<% end -%>
+
+<% fieldset( :class => "submit" ) do -%>
+<%= f.submit "Update" %> | <%= link_to "back to product", edit_admin_product_path(@product) %>
+<% end -%>
+
+<% end -%>

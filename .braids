@@ -1,0 +1,5 @@
+--- 
+vendor/rails: 
+  local_branch: braid/svn/vendor/rails
+  type: svn
+  remote: http://dev.rubyonrails.org/svn/rails/trunk

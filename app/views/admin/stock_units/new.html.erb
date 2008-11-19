@@ -1,0 +1,15 @@
+<h1>New StockUnit</h1>
+
+<% proper_form_for :stock_unit, :url => admin_product_stock_units_path(@product) do |f| -%>
+
+<% fieldset do -%>
+<%= f.text_field :stock %>
+<%= f.select :size_id, Size.all.collect {|s| [ s.name, s.id ] }, { :include_blank => false } %>
+
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Create" %> | <%= link_to "back to stock_units list", admin_product_stock_units_path(@product) %>
+<% end -%>
+
+<% end -%>

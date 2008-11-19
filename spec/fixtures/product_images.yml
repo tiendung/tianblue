@@ -1,0 +1,36 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  size: 1
+  content_type: MyString
+  filename: MyString
+  height: 1
+  width: 1
+  parent_id: 1
+  thumbnail: MyString
+
+two:
+  size: 1
+  content_type: MyString
+  filename: MyString
+  height: 1
+  width: 1
+  parent_id: 1
+  thumbnail: MyString
+# == Schema Info
+# Schema version: 20080930130231
+#
+# Table name: product_images
+#
+#  id           :integer(11)     not null, primary key
+#  parent_id    :integer(11)
+#  product_id   :integer(11)
+#  content_type :string(255)
+#  filename     :string(255)
+#  height       :integer(11)
+#  size         :integer(11)
+#  thumbnail    :string(255)
+#  width        :integer(11)
+#  created_at   :datetime
+#  updated_at   :datetime
+

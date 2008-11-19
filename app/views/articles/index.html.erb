@@ -1,0 +1,17 @@
+<div class="image one" id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/holding1.jpg" />
+</div>
+
+<div class="two" id="sub_content">
+<h1><%= @page_title %></h1>
+<ul class="articles">
+<% @articles.each do |a| -%>
+	<li class="news">
+		<%= link_to image_tag(a.mini_image_filename, :width=>205, :height=>153), news_path(a), :class=>"image" if a.mini_image_filename -%>
+		<h2><a href="<%= news_path(a) %>"><%= a.title %></a></h2>
+		 <p class="date"><%= a.posted_at.strftime("%e %b, %Y") %></p>
+		<%= a.html_summary %>
+	</li>
+<% end -%>
+</ul>
+</div>

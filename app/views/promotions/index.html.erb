@@ -1,0 +1,30 @@
+<h1>Listing promotions</h1>
+
+<table>
+  <tr>
+    <th>Promotion code</th>
+    <th>Promotion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				name</th>
+    <th>Discount %</th>
+    <th>Valid from</th>
+    <th>Valid until</th>
+    <th>Activate now</th>
+  </tr>
+
+<% for promotion in @promotions %>
+  <tr>
+    <td><a href="/promotions/<%= promotion.promotion_code %>"><%=h promotion.promotion_code %></a></td>
+    <td><%=h truncate(promotion.promotion_name, 80) %></td>
+    <td><%=h promotion.discount_percentage %></td>
+    <td><%=h promotion.valid_from %></td>
+    <td><%=h promotion.valid_until %></td>
+    <td><%=h promotion.activate_now %></td>
+    <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
+    <td><%= link_to 'Destroy', promotion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New promotion', new_promotion_path %>

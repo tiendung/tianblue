@@ -1,0 +1,103 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for :article, :url => admin_article_path(@article), :html => { :method => :put } do |f| -%>
+
+<% fieldset do -%>
+<%= f.text_field :title %>
+<%= f.text_area :summary %>
+<%= f.text_area :body %>
+<%= f.date_select :posted_at %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Update" %> | <%= link_to "back to articles list", admin_articles_path %>
+<% end -%>
+
+<% end -%>
+
+<% content_for :sub do %>
+<div class="delete">
+<%= button_to "Delete article - BE CAREFUL!!!", admin_article_path(@article), :method => :delete %>
+</div>
+<h2>Images</h2>
+<ul class="images">
+	<% @images.each do |i| -%>
+	<li>
+		<img src="<%= i.public_filename(:thumb) %>" alt="" />
+		<%= button_to "Delete", admin_article_image_path(@article, i), :method => :delete %>
+	</li>
+	<% end -%>
+</ul>
+<p><%= link_to "Add a new image", new_admin_article_image_path(@article) %></p>
+<h2>Formatting guide</h2>
+<table>
+  <tr>
+    <th>To get this effect&hellip;</th>
+    <th>Type this&hellip;</th>
+  </tr>
+  <tr>
+    <td>
+      <strong>Bold phrase</strong>
+    </td>
+    <td>
+      *Bold phrase*
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span style="font-style: italic;">Italic phrase</span>
+    </td>
+    <td>
+      _Italic phrase_
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Bulleted list</li>
+        <li>Bulleted list</li>
+      </ul>
+    </td>
+    <td>
+        * Bulleted list<br />
+        * Bulleted list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ol>
+        <li>Numbered list</li>
+        <li>Numbered list</li>
+      </ol>
+    </td>
+    <td>
+        # Numbered list<br />
+        # Numbered list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <blockquote>Indented block</blockquote>
+    </td>
+    <td>
+        &gt; Indented block
+    </td>
+  </tr>
+  <tr>
+    <td><h1>Big header</h1></td>
+    <td>h1. Big header</td>
+  </tr>
+  <tr>
+    <td><h2>Normal header</h2></td>
+    <td>h2. Normal header</td>
+  </tr>
+  <tr>
+    <td><a href="http://deepcalm.com">Deepcalm</a></td>
+    <td>"deepcalm":http://deepcalm.com</td>
+  </tr>
+  <tr>
+    <td><img src="http://37signals.com/svn/images/logo-small-writeboard.gif" /></td>
+    <td>!http://37signals.com/logo.gif!</td>
+  </tr>
+</table>
+<% end -%>

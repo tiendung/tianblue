@@ -1,0 +1,15 @@
+<h1>New Category</h1>
+
+<% proper_form_for :category, :url => admin_categories_path do |f| -%>
+
+<% fieldset do -%>
+	<%= f.text_field :name %>
+	<%= f.text_field :title %>
+	<%= f.text_area :description %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Create" %> | <%= link_to "back to categories list", admin_categories_path %>
+<% end -%>
+
+<% end -%>

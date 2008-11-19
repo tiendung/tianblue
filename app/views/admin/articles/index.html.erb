@@ -1,0 +1,19 @@
+<h1><%= @page_title %></h1>
+<p><%= link_to "new", new_admin_article_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="date">Date</th>
+		<th scope="col" class="text">Article</th>
+	</tr>
+</thead>
+<tbody>
+<% @articles.each do |a| -%>
+<tr>
+	<th scope="row" class="date"><%= a.posted_at.strftime("%d %b, %y") %></th>
+	<td class="text"><%=h a.title %> | <%= link_to "edit", edit_admin_article_path(a) %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>

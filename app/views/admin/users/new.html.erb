@@ -1,0 +1,17 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for :user, :url => admin_users_path do |f| -%>
+
+<% fieldset do -%>
+	<%= f.text_field :name %>
+	<%= f.text_field :login %>
+	<%= f.text_field :email %>
+	<%= f.password_field :password %>
+	<%= f.password_field :password_confirmation %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Create" %> | <%= link_to "back to users list", admin_users_path %>
+<% end -%>
+
+<% end -%>

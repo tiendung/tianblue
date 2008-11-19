@@ -1,0 +1,19 @@
+<h1><%= @page_title %></h1>
+<p><%= link_to "new", new_admin_size_path %></p>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="text">Size</th>
+		<th scope="col" class="text">Code</th>
+	</tr>
+</thead>
+<tbody>
+<% @sizes.each do |s| -%>
+<tr>
+	<th scope="row" class="text"><%=h s.name %> | <%= link_to "edit", edit_admin_size_path(s) %></th>
+	<td class="text"><%=h s.code %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>

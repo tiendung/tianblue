@@ -1,0 +1,23 @@
+/* - - - ADxMenu: IE6 BASIC styles [MANDATORY] - - - */
+
+.menu, .menu ul {	/* float.clear */
+	zoom: 1;
+}
+
+.menu li.adxmhover {
+	z-index: 10000;
+}
+
+.menu .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu .adxmhoverUL {	/* 1st-level submenu go below their parent item */
+	top: 100%;
+	left: 0;
+}
+
+.menu .adxmhoverUL .adxmhoverUL {	/* 2nd+ levels go on the right side of the parent item */
+	top: 0;
+	left: 100%;
+}

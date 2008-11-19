@@ -1,0 +1,17 @@
+<div id="content">
+
+  <% unless @page_class == "home" %>
+
+    <%= render :partial => "layouts/left_col" %>
+
+		<div id="right_col">
+		  <%= yield :layout %>
+		</div>
+
+  <% else %>
+
+    <%= yield :layout %>
+
+  <% end %>
+
+</div>

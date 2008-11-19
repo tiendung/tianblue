@@ -1,0 +1,26 @@
+<div class="image one" id="main_cat_img">
+	<img alt="" class="main" width="320" src="/images/holding3.jpg" />
+</div>
+
+<div class="two" id="sub_content">
+<h1>Your Orders</h1>
+
+<table cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col" class="date">Date</th>
+		<th scope="col" class="num">Value</th>
+		<th scope="col" class="text">Status</th>
+	</tr>
+</thead>
+<tbody>
+<% @orders.each do |o| -%>
+<tr>
+	<th scope="row" class="date"><%= link_to o.created_at.strftime("%e %b %Y"), order_path(o) %></th>
+	<td class="num"><%=h number_to_currency( o.value ) %></td>
+	<td class="text"><%=h o.status %></td>
+</tr>
+<% end -%>
+</tbody>
+</table>
+</div>

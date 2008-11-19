@@ -1,0 +1,29 @@
+<% @page_class = "home" %>
+
+<% if @image -%>
+<div class="image one">
+	<%= image_tag @image.public_filename(:home), :width=>859, :height=>365, :class=>"main" %>
+	<%= @welcome_message %>
+</div>
+<% end -%>
+
+<div class="two">
+<ul class="products">
+<% @categories.each do |c| -%>
+<li>
+	<%= link_to image_tag(c.mini_image_filename, :width=>205, :height=>250), category_url(c) if c.mini_image_filename -%>
+</li>	
+<% end -%>
+<% if @top_news -%>
+<li class="news">
+	<%= link_to image_tag(@top_news.mini_image_filename, :width=>205, :height=>153), news_path(@top_news), :class=>"image" if @top_news.mini_image_filename -%>
+	<h2><a href="<%= news_path(@top_news) %>"><%= @top_news.title %></a></h2>
+	<p class="date"><%= @top_news.posted_at.strftime("%e %b, %Y") %></p>
+	<%= @top_news.html_summary %>
+	<p><%= link_to "More on this story", news_path(@top_news) %> | <%= link_to "Other News", news_index_path %></p>
+</li>
+<li>
+</li>
+<% end -%>
+</ul>
+</div>

@@ -1,0 +1,17 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for :user, :url => admin_user_path(@user), :html => { :method => :put } do |f| -%>
+
+<% fieldset do -%>
+	<%= f.text_field :login %>
+	<%= f.text_field :name %>
+	<%= f.text_field :email %>
+	<%= f.check_box :is_admin %>
+	<%= f.select "promotion_id", Promotion.all_for_select, { :include_blank => true } %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Update" %> | <%= link_to "back to users list", admin_users_path %>
+<% end -%>
+
+<% end -%>

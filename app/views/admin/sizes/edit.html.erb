@@ -1,0 +1,16 @@
+<h1><%= @page_title %></h1>
+
+<% proper_form_for :size, :url => admin_size_path(@size), :html => { :method => :put } do |f| -%>
+
+<% fieldset do -%>
+	<%= f.text_field :name %>
+	<%= f.text_field :code %>
+	<%= f.text_field :relative_order %>
+	<%= f.text_area :description %>
+<% end -%>
+
+<% fieldset :class => "submit" do -%>
+<%= f.submit "Update" %> | <%= link_to "back to sizes list", admin_sizes_path %>
+<% end -%>
+
+<% end -%>

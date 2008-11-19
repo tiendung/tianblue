@@ -1,0 +1,85 @@
+/* ========= Base IE stylesheet ========== */
+/* This stylesheet contains all structural 
+and dropdown menu hacks for IE5.5 and IE6. */
+/* ======================================= */ 
+
+/* IE5 page centering */
+body {text-align: center;}
+#wrap {text-align: left;}
+
+/* IE5 box model */
+#content {
+width: 590px; /*ie5*/
+wid\th: 550px; /*ie6*/
+}
+#sub-section {
+width: 170px; /*ie5*/
+wid\th: 150px; /*ie6*/
+}
+
+/* basic 2 & basic 3 widths
+/* un-comment for templates
+
+#content {
+width: 367px; 
+}
+#sub-section {
+width: 150px;
+}
+
+html.nocol #content,
+body#staff #content,
+body.listing #content,
+body.detail #content {
+width: 558px;
+padding-right: 15px !important;
+}
+
+*/
+
+/* BG image painting */
+#wrap #header, 
+#wrap #menu, 
+#wrap #content, 
+#wrap #sub-section, 
+#wrap #footer {
+display: inline-block;
+}
+
+body#home #sub-section form legend {
+margin-left: -8px;
+}
+
+body.listing #filter p {
+margin-right: 10px;
+}
+
+/* Float collapse */
+body#staff dl,
+body.listing .property,
+body.auction #content dl,
+body.ofi #content dl {
+height: 1%;
+}
+
+body.alert #content ul#alertmenu {
+display: block !important;
+height: 1%;
+}
+
+body.suburbProfiles #content .suburb {
+zoom: 1;
+}
+
+body.alert #content #loginbox label {
+width: 58px !important;
+margin-right: 5px;
+}
+
+body.alert #content #loginbox input {
+width: 130px !important;
+}
+
+body.alert form#alertRegister fieldset select {
+width: 254px !important;
+}

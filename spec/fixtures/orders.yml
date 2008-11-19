@@ -1,0 +1,28 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+# == Schema Info
+# Schema version: 20080930130231
+#
+# Table name: orders
+#
+#  id                    :integer(11)     not null, primary key
+#  country_id            :integer(11)
+#  promotion_id          :integer(11)
+#  user_id               :integer(11)
+#  address               :text
+#  discount_multiplier   :decimal(8, 2)   default(1.0)
+#  email                 :string(100)
+#  name                  :string(255)
+#  phone                 :string(20)
+#  postcode              :string(255)
+#  receive_update        :boolean(1)      default(TRUE)
+#  status                :string(255)
+#  transaction_reference :string(255)
+#  created_at            :datetime
+#  updated_at            :datetime
+

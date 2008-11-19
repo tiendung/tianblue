@@ -1,0 +1,193 @@
+@import "reset.css";
+
+/* =html */
+html { background : #fff; color : #0f1214; }	
+
+/* =body */
+body { font-family: "Lucida Grande", Helvetica, Arial, sans-serif; font-size : 100%; line-height : 1.125em; }
+
+/* =blocktext */
+h1, h2, h3, h4, h5, p, blockquote, address, dl, ul, ol { margin : 0 10px; }
+
+/* =h1 */
+#branding h1 { font-size : 1.125em; line-height: 2em; text-transform : uppercase;
+}
+h1 { font-size : 1.125em; line-height : 2em; }
+
+/* =h2 */
+#branding h2 { position : absolute; right : 0; top : 0; }
+h2 {
+	font-size : 1em; line-height : 2.25em;
+}
+
+/* =h3 */
+h3 {
+	font-size : 0.875em; line-height : 2.5614em;
+}
+
+/* =h4 */
+h4 { font-size : 120%/1.5; font-weight : bold; }
+#nav_main h4, #nav_sub h4 { position : absolute; top : -9999px; }
+li h4 { margin : 0; }
+#results h4 { border-top : 1px solid #000; }
+
+/* =h5 */
+h5 { font-size : 110%/1.6363; font-weight : bold; }
+
+/* =p */
+p { font-size : 0.625em; line-height: 1.8em; }
+li p { margin-left : 0; }
+dd p { margin-left : 0; padding-top : 0; }
+#flash p { color : #fff; background-color : #0a0; position : absolute; top : 36px; right : -4px; padding : 0 2px; }
+#flash.error p { background-color : #a00; }
+
+#results p { width : 140px; }
+
+/* =kbd/del/ins */
+kbd {  }
+del { color : #999; }
+abbr { cursor : help; }
+ins { text-decoration : none; }
+
+/* =strong/b/em/i */
+strong, b { font-weight : bold; }
+em, i { font-style : italic; }
+
+/* =address */
+address { font-style : normal; }
+address span { display : block; }
+
+/* =pre code */
+pre, code { font : 100% monospace; }
+
+/* =dl dt dd */
+dt {  }
+dd {  }
+
+/* =ul */
+ul { list-style-type : none; }
+#nav_access { position : absolute; top : -9999px; margin : 0; }
+ul.images { height : 80px; }
+
+/* =ol */
+fieldset ol { width : 390px; margin : 0 10px; }
+
+/* =li */
+li { font-size : 0.625em; line-height: 1.8em; }
+#nav_main li, #nav_sub li { display : inline; padding-right : 1em; }
+#nav_main li { font-weight : bold; }
+fieldset ol li { clear : left; }
+ul.images li { float : left; }
+
+/* =img */
+img, a img { border : none; }
+
+/* =hr */
+hr { display : none; }
+.clear { clear : both; }
+
+/* =a */
+a, a:visited { color : #5d1117; text-decoration : none; }
+a:hover { color : #450c07; text-decoration : underline; }
+a:active, a:focus { color : #000; text-decoration : underline; }
+h1 a {
+	display : block;
+	height : 53px;
+	text-indent : -9999px;
+}
+#siteinfo a, #siteinfo a:visited, #siteinfo a:hover { color : #fff; text-decoration : underline; }
+
+/* =table */
+table { width : 390px; margin : 0 10px 0 80px; font-size : 0.625em; line-height: 1.8em; }
+table.sub { color : #777; }
+
+/* =caption */
+caption { 
+	font-size : 1.125em; line-height : 2em; text-align : left;
+	margin-left : -70px;
+}
+
+/* =thead */
+
+/* =tr */
+tr { padding : .5em 0; }
+thead tr { border-bottom : 1px solid #555; }
+tfoot tr { border-top : 1px solid #555; }
+tr.alt { background : #eee;}
+tbody tr:hover { background : #ddd;}
+
+/* = th td */
+th, td { padding : 0 3px; vertical-align : top; text-align : left; }
+th { font-weight : bold; }
+tbody th { width : auto; }
+.num { width : 80px ; text-align : right; }
+.text { width : 170px ; }
+
+/* =form */
+form#search {
+	background : #ddd;
+	margin-bottom : 10px; padding : 10px;
+	border-top : 1px solid #aaa;
+}
+
+div.delete form { padding : 10px; background : #5d1117; text-align : right; margin-bottom : 10px; }
+
+/* =fieldset */
+
+/* =legend */
+
+/* =label */
+label {
+	font-size : 1.2em; line-height : 1.5em; font-weight : bold; text-align : right;
+	display : block; float : left; clear : left;
+	width : 145px;
+	margin : 0.2em 0 1.3em 0; padding: 0 5px 0 0;
+}
+
+/* =input */
+input[type=text], input[type=file], textarea {
+	font-size : 1.2em; line-height : 1.5em;
+	width : 234px;
+	margin: 0; padding: 2px; border: 1px solid #bbb;
+}
+fieldset input[type=submit] { margin : 0 0 10px 165px; }
+
+/* =textarea */
+
+/* =select */
+
+/* =div */
+
+/* =layout */
+#nav_main {
+	border-bottom : 1px solid black;
+}
+#container { position : relative; width : 960px; }
+#content {
+	min-height : 400px;
+	padding : 1px 0 80px 0;
+}
+#content_main {
+	float : left;
+	position : relative;
+	width : 480px;
+}
+#content_sub {
+	width : 480px;
+	margin : 36px 0 40px 480px;
+}
+#nav_sub {  }
+#siteinfo { 
+	clear : both;
+	background-color : #666;
+	bottom : 0; left : 0 ;
+	width : 960px;
+	padding : 8px 0;
+	border-top : 1px solid #444;
+	margin-top : 20px;
+}
+
+/* =other page layout */
+
+/* Safari FOUC */
+body { display : block !important; }

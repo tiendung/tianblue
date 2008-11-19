@@ -1,0 +1,20 @@
+<% fieldset do -%>
+<ol>
+	<li><%= f.label :promotion_code %>
+			<%= f.text_field :promotion_code %></li>
+
+  <li><%= f.label :promotion_name %>
+			<%= f.text_field :promotion_name %></li>
+
+  <li><%= f.label :discount_percentage %>
+			<%= f.text_field :discount_percentage %></li>
+
+  <li><%= f.label :valid_from %>
+			<%= f.date_select :valid_from %></li>
+
+  <li><%= f.label :valid_until %>
+			<%= f.date_select :valid_until, :default => 15.days.from_now %></li>
+
+  <li><%= f.label :activate_now %>
+			<%= f.check_box :activate_now %></li>
+</ol>

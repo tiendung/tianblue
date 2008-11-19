@@ -1,0 +1,11 @@
+#branding h1 a {
+	background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/branding_h1.png', sizingMethod='crop');
+	cursor : pointer;
+}
+#nav_main ul {
+	background: transparent url(/images/nav_main.gif) top right no-repeat;
+}
+
+ul.products li {
+	margin-right : 4px;
+}

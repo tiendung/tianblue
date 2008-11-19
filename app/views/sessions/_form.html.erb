@@ -1,0 +1,12 @@
+<% form_tag session_path do -%>
+<fieldset>
+	<ol>
+		<li><label for="login">Username</label><%= text_field_tag 'login', @login %></li>
+		<li><label for="password">Password</label><%= password_field_tag 'password', nil %></li>
+		<li><label for="remember_me">Remember me:</label><%= check_box_tag 'remember_me', '1', @remember_me %></li>
+	</ol>
+</fieldset>
+<% fieldset :class => "submit" do -%>
+<%= submit_tag "Log in" %> | <%= link_to "I forgot my password!", forgot_password_url  %>
+<% end -%>
+<% end -%>
